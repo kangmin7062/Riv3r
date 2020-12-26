@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style id="stndz-style"></style>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;display=swap" rel="stylesheet">
+	<style>
+        body, html { 
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .back {
+            background-image:url('https://i.ibb.co/jV7bmLD/qorud.jpg');
+            border: 0;
+            padding: 0; 
+            min-height: 100%;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+		#helloText {
+			color: white;
+			width: 100%;
+			text-align: center;
+			font-size: 100px;
+            font-family: 'Black Han Sans', sans-serif;
+		}
+
+        #d {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Black Han Sans', sans-serif;
+        }
+
+        #head1 {
+			color: white;
+			width: 100%;	
+            text-align: center;
+			font-size: 40px;
+            font-family: 'Black Han Sans', sans-serif;
+		}
+        #br1 {
+            width: 100%;
+            height: 120px;    
+        }
+        #br2 {
+            width: 100%;
+            height: 50px;    
+        }
+        #br3 {
+            width: 100%;
+            height: 100px;    
+        }
+	</style>
+</head>
+
+<body> 
+    <div class=back> 
+
+    <div id= br1><br></div> 
+
+    <div id="head1" class=text>한살 더 쳐먹기 전까지</div>
+
+    <div id= br2><br></div>
+
+    <div id="helloText" ></div>
+
+    <div id= br3><br></div>
+
+    <div id= d>Made By Riv3r.</div>
+
+</div>
+
+<script>
+function showtime() {
+        let newdate = new Date("2021-01-01")
+        let nowdate = new Date()
+        let sub = newdate - nowdate;
+        sub = sub / 1000
+        let min = parseInt(sub / 60);
+
+        let sec = parseInt(sub % 60);
+        return min + "분\n " + sec + "초" 
+    }
+    let myEl = document.getElementById("helloText")
+     
+    myEl.innerText = showtime();
+    
+    setInterval(function() {
+        myEl.innerText = showtime();
+    }, 1000)
+</script>
+</body>
+</html>
